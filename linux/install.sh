@@ -1,8 +1,9 @@
 #! /bin/bash
 
-if test -s ./us.bkup -a -s ./evdev.xml.bkup then
+if test -s ./us.bkup -a -s ./evdev.xml.bkup
+then
     echo 'already installed!'
-    exit 0
+    exit
 fi
 cp /usr/share/X11/xkb/symbols/us ./us.bkup
 cp /usr/share/X11/xkb/rules/evdev.xml ./evdev.xml.bkup
