@@ -3,6 +3,12 @@
 usPath='/usr/share/X11/xkb/symbols/us'
 evdevPath='/usr/share/X11/xkb/rules/evdev.xml'
 
+if [! -e $usPath -o ! -e $evdevPath]
+then
+    echo 'Not Support! Aborting installation'
+    exit
+fi
+
 # adding layout file
 if [! -e ./us.bkup]
 then
@@ -10,7 +16,7 @@ then
     cat us >> $usPath
 else
     echo 'backup file us.bkup founded - reinstalling'
-    if $(grep 'xkb_symbols "en_de"' $usPath) = ''
+    if [[ -z $(grep 'xkb_symbols "en_de"' $usPath) ]]
     then
         cat us >> $usPath
     else
@@ -25,7 +31,7 @@ then
     sed -i '/English (Workman, intl/ r evdev.xml' $evdevPath
 else
     echo 'backup file evdev.xml.bkup founded - reinstalling'
-    if $(grep 'US, DE, no dead keys' $evdevPath) = ''
+    if [[ -z $(grep 'US, DE, no dead keys' $evdevPath) ]]
     then
         sed -i '/English (Workman, intl/ r evdev.xml' $evdevPath
     else
