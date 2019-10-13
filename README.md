@@ -12,7 +12,7 @@ asuo + AltGr = äßüö
 
 AUO + AltGr = ÄÜÖ
 
-![layout](https://raw.githubusercontent.com/HE7086/EN-DE_keyboardLayout/master/layout.jpg)
+![layout](./layout.jpg)
 
 # Install
 
