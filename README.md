@@ -34,7 +34,8 @@ sudo ./install.sh
 ```
 
 2. logout and re-login(restart is not required)
-3. choose the keyboard layout in your language/input manager like `gnome settings` or `fcitx-config` etc.
+3. choose the keyboard layout in your language/input manager like `gnome settings` or `fcitx-config` etc.  
+the layout should be in the category `English(US)` and has the name `English (US, DE, no dead keys)`
 4. just start typing  
 
 **warning**: the script is only tested on ubuntu 18.04 and manjaro 18.1, other Releases may not support!
