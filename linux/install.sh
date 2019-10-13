@@ -1,16 +1,16 @@
-#! /bin/bash
+#! /bin/sh
 
 usPath='/usr/share/X11/xkb/symbols/us'
 evdevPath='/usr/share/X11/xkb/rules/evdev.xml'
 
-if [! -e $usPath -o ! -e $evdevPath]
+if [[ ! -e $usPath && -e $evdevPath ]]
 then
     echo 'Not Support! Aborting installation'
     exit
 fi
 
 # adding layout file
-if [! -e ./us.bkup]
+if [[ ! -e ./us.bkup ]]
 then
     cp $usPath ./us.bkup
     cat us >> $usPath
@@ -25,7 +25,7 @@ else
 fi
 
 # register the layout
-if [! -e ./evdev.xml.bkup]
+if [[ ! -e ./evdev.xml.bkup ]]
 then
     cp $evdevPath ./evdev.xml.bkup
     sed -i '/English (Workman, intl/ r evdev.xml' $evdevPath
