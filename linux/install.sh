@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /bin/bash
 
 usPath='/usr/share/X11/xkb/symbols/us'
 evdevPath='/usr/share/X11/xkb/rules/evdev.xml'
