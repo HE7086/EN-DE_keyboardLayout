@@ -1,3 +1,10 @@
+# Deprecated
+
+please consider using `German - German (US)` or `English(US) - German, Swedish and Finnish (US)` instead  
+
+Both have the same feature and don't need a system hack(evdev)
+
+---
 # EN-DE_keyboardLayout
 
 A custom keyboard layout based on us-international layout optimized for german input
